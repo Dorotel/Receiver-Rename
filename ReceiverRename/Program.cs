@@ -24,6 +24,15 @@ namespace ReceiverRename
                 return;
             }
 
+            // Check for integration test mode
+            if (args.Length > 0 && args[0].ToLower() == "--integration-test")
+            {
+                await IntegrationTest.RunIntegrationTest();
+                Console.WriteLine("\nPress any key to exit...");
+                Console.ReadKey();
+                return;
+            }
+
             // Handle command line arguments
             if (args.Length > 0 && args[0].ToLower() != "--test")
             {

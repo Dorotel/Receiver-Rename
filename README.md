@@ -43,6 +43,12 @@ Run built-in tests:
 dotnet run -- --test
 ```
 
+### Integration Test
+Run end-to-end testing with sample files:
+```bash
+dotnet run -- --integration-test
+```
+
 ## Default Settings
 
 - **Scans Folder**: `H:\scans`
